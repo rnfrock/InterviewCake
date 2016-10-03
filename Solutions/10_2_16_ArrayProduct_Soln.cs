@@ -1,4 +1,4 @@
-// 10_2_16_ArrayProduct Solution
+// 10/2/16 Array Product Interview Question 
 
 
 using System;
