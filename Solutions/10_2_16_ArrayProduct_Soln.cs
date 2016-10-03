@@ -21,9 +21,10 @@ namespace _10_2_16_ArrayProduct_Soln
 
                 firstProd *= input[i];
                 secondProd *= input[endIdx];
+                //Console.WriteLine("firstProd = " + firstProd + ", secondProd = " + secondProd + ", i = " + i);
 
-                ans[i+1] = (ans[i+1] == 0) ? firstProd : firstProd * ans[i+1];
-                ans[endIdx-1] = (ans[endIdx-1] == 0) ? secondProd : secondProd * ans[endIdx-1];
+                ans[i+1] = (i < ((l * 0.5)-1) || i == l-2) ? firstProd : firstProd * ans[i+1];
+                ans[endIdx-1] = (i < ((l * 0.5)-1) || i == l-2) ? secondProd : secondProd * ans[endIdx-1];
             }
 
             return ans;
@@ -31,7 +32,7 @@ namespace _10_2_16_ArrayProduct_Soln
 
         static void Main(string[] args)
         {
-            int[] input = { 1, 2, 6, 5, 9 };
+            int[] input = { 1, 7, 3, 4 };
             int[] ans = getProductsOfAllIntsExceptAtIndex(input);
             foreach( int x in ans )
             {
@@ -40,5 +41,3 @@ namespace _10_2_16_ArrayProduct_Soln
         }
     }
 }
-
-
