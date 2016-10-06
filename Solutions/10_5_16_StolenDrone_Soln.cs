@@ -28,6 +28,20 @@ namespace _10_5_16_StolenDrone_Soln
             }
             int[] id = missing.ToArray();
             return id[0];
+
+
+            /* Check my answer solution- space saver!
+             * 
+             * public int findUniqueDeliveryId( int[] deliveryIds ) {
+             *      int uniqueDeliveryId = 0;
+             *      for( int i = 0; i < deliveryIds.Length; i++ ) {
+             *          uniqueDeliveryId ^= deliveryIds[i];
+             *      }
+             *      return uniqueDeliveryId;
+             * }
+             */
+
+
         }
 
         static void Main(string[] args)
